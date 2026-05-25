@@ -79,14 +79,14 @@
 <div class="container">
   <div class="doc-header">
     <h1>Privacy Policy</h1>
-    <p>Last updated April 07, 2026</p>
+    <p>Last updated May 25, 2026</p>
   </div>
 
   <p>This Privacy Notice for Mohamed Afrideen (doing business as WalletTrack) (<strong>"we"</strong>, <strong>"us"</strong>, or <strong>"our"</strong>), describes how and why we might access, collect, store, use, and/or share (<strong>"process"</strong>) your personal information when you use our services (<strong>"Services"</strong>), including when you:</p>
   <ul>
     <li>Visit our website at <a href="https://www.thewallettrack.com">https://www.thewallettrack.com</a> or any website of ours that links to this Privacy Notice</li>
     <li>Download and use our mobile application (WalletTrack), or any other application of ours that links to this Privacy Notice</li>
-    <li>Use WalletTrack — a personal budget tracking app for iOS, Android, and Web that allows users to manually log income and expenses across multiple accounts, attach receipt photos, and track their finances in one place</li>
+    <li>Use WalletTrack — a personal budget tracking app for iOS, Android, and Web that allows users to manually log income and expenses across multiple accounts, use AI-powered voice entry and bill scanning, attach receipt photos, and track their finances in one place</li>
     <li>Engage with us in other related ways, including any marketing or events</li>
   </ul>
   <p><strong>Questions or concerns?</strong> Reading this Privacy Notice will help you understand your privacy rights and choices. We are responsible for making decisions about how your personal information is processed. If you do not agree with our policies and practices, please do not use our Services. If you still have any questions or concerns, please contact us at <a href="mailto:support@thewallettrack.com">support@thewallettrack.com</a>.</p>
@@ -126,7 +126,13 @@
   <p><strong>Sensitive Information.</strong> We do not process sensitive information.</p>
   <p><strong>Application Data.</strong> If you use our application(s), we also may collect the following information if you choose to provide us with access or permission:</p>
   <ul>
-    <li><em>Mobile Device Access.</em> We may request access or permission to certain features from your mobile device, including your mobile device's camera, storage, and other features. If you wish to change our access or permissions, you may do so in your device's settings.</li>
+    <li><em>Mobile Device Access.</em> We may request access or permission to certain features from your mobile device, including:
+      <ul style="margin-top: 8px;">
+        <li><strong>Microphone.</strong> Used for the voice transaction feature. When you use voice entry, your spoken input is recorded, transcribed, and sent to Anthropic (Claude API) for processing. The audio is not stored on our servers or by Anthropic after the API call completes.</li>
+        <li><strong>Camera.</strong> Used for the bill scanning feature. When you scan a bill or receipt, the image is uploaded to Supabase Storage (your private receipts bucket) and sent to Anthropic (Claude API) for parsing. The image is stored as an attachment on your transaction record.</li>
+      </ul>
+      If you wish to change our access or permissions, you may do so in your device's settings.
+    </li>
     <li><em>Mobile Device Data.</em> We automatically collect device information (such as your mobile device ID, model, and manufacturer), operating system, version information and system configuration information, device and application identification numbers, browser type and version, hardware model, Internet service provider and/or mobile carrier, and Internet Protocol (IP) address (or proxy server).</li>
   </ul>
 
@@ -144,6 +150,7 @@
     <li><strong>To respond to user inquiries/offer support to users.</strong></li>
     <li><strong>To send administrative information to you.</strong></li>
     <li><strong>To save or protect an individual's vital interest.</strong></li>
+    <li><strong>To process AI-powered features.</strong> When you use voice transaction entry or bill scanning, your audio or image is sent to Anthropic's Claude API for processing. This is required to provide the AI features. Processed data is not retained by Anthropic beyond the API call.</li>
   </ul>
 
   <h2 id="section3">3. What legal bases do we rely on to process your information?</h2>
@@ -160,6 +167,8 @@
     <li><strong>Web and Mobile Analytics:</strong> PostHog</li>
     <li><strong>Website Hosting:</strong> Vercel</li>
     <li><strong>Website Testing:</strong> TestFlight and Google Play Console</li>
+    <li><strong>AI Processing:</strong> Anthropic (Claude API) — processes voice audio and bill scan images for the AI transaction features. Data is not stored by Anthropic after processing. See <a href="https://www.anthropic.com/privacy" target="_blank">Anthropic's Privacy Policy</a>.</li>
+    <li><strong>Subscription Management:</strong> RevenueCat — manages Pro subscription status, purchase verification, and entitlements. Payment is processed by Apple App Store or Google Play; we do not handle payment card data directly. See <a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat's Privacy Policy</a>.</li>
   </ul>
   <p>We also may need to share your personal information in the following situations: <strong>Business Transfers</strong> — We may share or transfer your information in connection with, or during negotiations of, any merger, sale of company assets, financing, or acquisition of all or a portion of our business to another company.</p>
 
@@ -200,7 +209,7 @@
     <tr><td>E. Biometric information</td><td>Fingerprints and voiceprints</td><td>NO</td></tr>
     <tr><td>F. Internet or other similar network activity</td><td>Browsing history, search history, online behaviour</td><td>NO</td></tr>
     <tr><td>G. Geolocation data</td><td>Device location</td><td>NO</td></tr>
-    <tr><td>H. Audio, electronic, sensory, or similar information</td><td>Images and audio, video or call recordings</td><td>NO</td></tr>
+    <tr><td>H. Audio, electronic, sensory, or similar information</td><td>Images and audio, video or call recordings</td><td>YES — voice audio and bill scan images, processed via Anthropic API only, not stored after processing (except receipt images stored in your private Supabase bucket)</td></tr>
     <tr><td>I. Professional or employment-related information</td><td>Business contact details, work history</td><td>NO</td></tr>
     <tr><td>J. Education information</td><td>Student records and directory information</td><td>NO</td></tr>
     <tr><td>K. Inferences drawn from collected personal information</td><td>Inferences drawn to create a profile or summary</td><td>NO</td></tr>
@@ -223,7 +232,6 @@
   <h2 id="section15">15. How can you review, update, or delete the data we collect from you?</h2>
   <p>Based on the applicable laws of your country or state of residence in the US, you may have the right to request access to the personal information we collect from you, details about how we have processed it, correct inaccuracies, or delete your personal information. To request to review, update, or delete your personal information, please contact us at <a href="mailto:support@thewallettrack.com">support@thewallettrack.com</a>.</p>
 
-  <p style="margin-top: 48px; font-size: 13px; color: rgba(255,255,255,0.4);">This Privacy Policy was created using Termly's Privacy Policy Generator.</p>
 </div>
 
 <footer>
